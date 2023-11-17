@@ -1,0 +1,25 @@
+.MyApp {
+	position: relative;
+	width: 1920px;
+	margin: 0 auto;
+}
+
+.container {
+	width: 1440px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.banner::after {
+	position: absolute;
+	content: url("../../public/image/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: -50px;
+	z-index: -1;
+}
+.banner {
+	filter: gray;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(0.7);
+}

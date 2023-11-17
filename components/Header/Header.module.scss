@@ -1,0 +1,51 @@
+.Header {
+	position: relative;
+}
+
+.links {
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+.logo path {
+	fill: #4e5240;
+}
+
+.logo svg {
+	width: 170px;
+	height: 120px;
+}
+
+.link {
+	text-decoration: dotted;
+	position: relative;
+	color: #f6ffc4;
+	transition: color 0.4s ease;
+	cursor: pointer;
+}
+.link::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -7px;
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+	transform: scaleX(0);
+	transition: transform 0.4s ease;
+	border-radius: 2px;
+}
+
+.link:hover::after {
+	transform: scaleX(1); /* Увеличиваем линию при hover */
+}
+
+.link:hover {
+	color: #fff; /* Задержка 0.4 секунды перед изменением цвета */
+}
