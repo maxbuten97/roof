@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "../IconComponent/Icon";
 import s from "./Header.module.scss";
 import { Button, Checkbox, Input, Modal, Row, Text } from "@nextui-org/react";
+import NavigationLinks from "../NavigationLinks/NavigationLinks";
 const Header = () => {
   const [visible, setVisible] = React.useState(false);
   const handler = () => setVisible(true);
@@ -10,30 +11,16 @@ const Header = () => {
     setVisible(false);
     console.log("closed");
   };
-  interface ILinksHeader {
-    id: string;
-    text: string;
-    src: string;
-  }
 
-  const linksHeader: ILinksHeader[] = [
-    { id: "1", text: "Что мы предлагаем?", src: "/" },
-    { id: "2", text: "Примеры работ", src: "/" },
-    { id: "3", text: "Преимущества", src: "/" },
-    { id: "4", text: "Материал", src: "/" },
-    { id: "5", text: "Товары", src: "/" },
-    { id: "6", text: "Отзывы", src: "/" },
-    { id: "7", text: "Контакты", src: "/" },
-  ];
   return (
     <div className={s.Header}>
       <nav className={s.navigation}>
         <div className={s.form_block}>
-          <div className={s.logo}>
+          <div className={`${s.logo} ${s.floating_text}`}>
             <Icon name="logo" />
           </div>
           <Button
-            className={s.form_button}
+            className={`${s.form_button} ${s.floating_text}`}
             css={{
               maxWidth: "15%",
               backgroundColor: "#d4ddb3",
@@ -48,14 +35,11 @@ const Header = () => {
             width="40%"
             open={visible}
             onClose={closeHandler}
-            css={{ padding: "$15", backgroundColor: "#798357" }}
+            css={{ padding: "$13", backgroundColor: "#b7be9a" }}
           >
             <Modal.Header className={s.modal_header}>
               <Text id="modal-title" size={30}>
-                Оставьте заявку на получение инвестиций
-                <Text b size={15}>
-                  Наши специалисты помогут вам оценить ваш проект
-                </Text>
+                Оставьте заявку на получение индивидуальной цены
               </Text>
             </Modal.Header>
             <Modal.Body>
@@ -63,18 +47,20 @@ const Header = () => {
                 clearable
                 bordered
                 fullWidth
-                color="primary"
+                color="default"
                 size="xl"
-                placeholder="Имя"
+                placeholder="Почта"
                 css={{ width: "90%", margin: "10px auto" }}
               />
 
               <Input
+                className={s.input}
                 clearable
                 bordered
                 fullWidth
-                color="primary"
+                color="default"
                 size="xl"
+                type="email"
                 placeholder="Телефон"
                 css={{ width: "90%", margin: "10px auto" }}
               />
@@ -82,32 +68,30 @@ const Header = () => {
                 clearable
                 bordered
                 fullWidth
-                color="primary"
+                color="default"
                 size="xl"
-                placeholder="Название проекта"
+                type="tel"
+                placeholder="Ваше имя"
                 css={{ width: "90%", margin: "10px auto" }}
               />
             </Modal.Body>
             <Modal.Footer>
               <Button
                 size="lg"
-                css={{ width: "90%", margin: "10px auto" }}
+                css={{
+                  width: "90%",
+                  margin: "10px auto",
+                  backgroundColor: "#4d4d4d",
+                  color: "#d4ddb3",
+                }}
                 onPress={closeHandler}
               >
-                Отправить
+                Отправить заявку
               </Button>
             </Modal.Footer>
           </Modal>
         </div>
-        <div className={s.links}>
-          {linksHeader.map((link) => {
-            return (
-              <div className={`${s.link} ${s.floating_text}`} key={link.id}>
-                {link.text}
-              </div>
-            );
-          })}
-        </div>
+        <NavigationLinks />
       </nav>
     </div>
   );

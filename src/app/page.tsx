@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/components/Header/Header";
 import s from "./page.module.scss";
+import Footer from "@/components/Footer/Footer";
 
 function Page() {
   return (
@@ -11,7 +12,16 @@ function Page() {
             <Header />
           </div>
         </div>
-        <footer></footer>
+        <div className={s.logo_text}>
+          <span className={s.roofs}>
+            {" "}
+            Roofs<span className={s.and}> &</span> Кровля
+          </span>
+        </div>
+        <div className={s.products}>
+          <div className={s.container}>ку</div>
+        </div>
+        <Footer />
       </div>
     </div>
   );
