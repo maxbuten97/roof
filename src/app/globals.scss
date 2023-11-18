@@ -5,11 +5,16 @@
 	src: url("/fonts/copperplate.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Domine";
+	src: url("/fonts/domine.ttf") format("truetype");
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Copperplate", sans-serif;
+
 	font-weight: 400;
 }
 
