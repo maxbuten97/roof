@@ -32,19 +32,18 @@
 .link:hover {
 	color: #fff; /* Задержка 0.4 секунды перед изменением цвета */
 }
+
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
-		transform: translateX(40px);
 	}
 	to {
 		opacity: 1;
-		transform: translateX(0);
 	}
 }
 
 .floating_text {
 	opacity: 0;
-	animation: fadeInUp 1s ease-out;
+	animation: fadeInUp 2s ease-out;
 	animation-fill-mode: forwards;
 }
