@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
 
+@font-face {
+	font-family: "Copperplate";
+	src: url("/fonts/copperplate.ttf") format("truetype");
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Manrope", sans-serif;
-	font-weight: 500;
+	font-family: "Copperplate", sans-serif;
+	font-weight: 400;
 }
 
 html,

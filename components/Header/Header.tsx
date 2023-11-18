@@ -102,7 +102,7 @@ const Header = () => {
         <div className={s.links}>
           {linksHeader.map((link) => {
             return (
-              <div className={s.link} key={link.id}>
+              <div className={`${s.link} ${s.floating_text}`} key={link.id}>
                 {link.text}
               </div>
             );
