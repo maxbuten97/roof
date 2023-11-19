@@ -16,7 +16,8 @@
 	position: absolute;
 	z-index: 2;
 	bottom: 2%;
-	left: 45%;
+	left: 50%;
+	transform: translateX(-50%);
 	font-size: 30px;
 	color: #d4ddb365;
 	text-transform: uppercase;
@@ -28,4 +29,42 @@
 
 .and {
 	font-family: "Domine", sans-serif;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.floating_text {
+	opacity: 0;
+	animation: fadeInUp 2s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@media (max-width: 1000px) {
+	.slogan {
+		margin-top: 50px;
+		font-size: 45px;
+	}
+}
+@media (max-width: 857px) {
+	.slogan {
+		margin-top: 20px;
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 414px) {
+	.slogan {
+		margin-top: 20px;
+		font-size: 25px;
+	}
+	.logo_text {
+		font-size: 16px;
+	}
 }

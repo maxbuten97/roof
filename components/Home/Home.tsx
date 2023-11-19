@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <div className={s.content}>
-        <h1 className={s.slogan}>
+        <h1 className={`${s.slogan} ${s.floating_text}`}>
           <WordCarousel words={words} />
           решение для вашей кровли
         </h1>

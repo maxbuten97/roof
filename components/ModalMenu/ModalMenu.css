@@ -33,7 +33,7 @@
   -webkit-animation-duration: 0.4s;
   animation-name: slide-in;
   animation-duration: 0.5s;
-  height: 600px;
+  height: 100%;
   border-radius: 0;
   border-radius: 0 0 0 10px;
 }
@@ -63,7 +63,7 @@
 }
 .modal-body_modal_header {
   overflow: hidden;
-  height: 230px;
+  height: 100%;
 }
 .modal-content_modal_header {
   padding: 0;
@@ -72,17 +72,11 @@
   text-align: center;
   text-transform: uppercase;
   color: #111111;
-  
 }
 
-.line_modal_header {
-  border: 1px dashed rgba(63, 78, 101, 0.3);
+.links {
+	padding-bottom: 30px;
 }
-.modal-footer_modal_header {
-  display: flex;
-  flex-direction: column;
-}
-
 
 
 

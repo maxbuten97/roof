@@ -16,12 +16,11 @@ function Page() {
             <Home />
           </main>
         </div>
-
-        <div className={s.products}>
-          <div className={s.container}>ку</div>
-        </div>
-        <Footer />
       </div>
+      <div className={s.products}>
+        <div className={s.container}>ку</div>
+      </div>
+      <Footer />
     </div>
   );
 }

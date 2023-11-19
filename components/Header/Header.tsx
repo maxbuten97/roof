@@ -33,7 +33,9 @@ const Header = () => {
         </div>
         {/*  */}
 
-        <NavigationLinks />
+        <div className={s.nav}>
+          <NavigationLinks />
+        </div>
       </nav>
     </div>
   );

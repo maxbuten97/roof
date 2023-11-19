@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import "./ModalMenu.css";
+import NavigationLinks from "../NavigationLinks/NavigationLinks";
 // интерфейс для пропсов
 interface ModalPropsHeader {
   visible: boolean;
@@ -45,12 +46,11 @@ const ModalMenu = ({
         <div className="container_modal_header">
           <div className="modal-body_modal_header">
             <div className="modal-content_modal_header">
-              <div className="adress_modal_header"></div>
-
+              <div className="links">
+                <NavigationLinks />
+              </div>
               <div className="info_modal_header">
-                <div className="info__block_modal_header">
-                  <div className="adress_modal_header"></div>
-                </div>
+                <div className="info__block_modal_header"></div>
               </div>
             </div>
           </div>
