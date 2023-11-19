@@ -1,0 +1,31 @@
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.slogan {
+	text-align: center;
+	margin-top: 80px;
+	font-size: 55px;
+	color: #e9f5a7;
+	max-width: 600px;
+	font-weight: 600;
+}
+
+.logo_text {
+	position: absolute;
+	z-index: 2;
+	bottom: 2%;
+	left: 45%;
+	font-size: 30px;
+	color: #d4ddb365;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+.roofs {
+	font-family: "Copperplate", sans-serif;
+}
+
+.and {
+	font-family: "Domine", sans-serif;
+}
