@@ -3,6 +3,7 @@
 }
 
 .form_block {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -34,6 +35,13 @@
 	height: 120px;
 }
 
+.burger__mob_wrap {
+	display: none;
+}
+.burger__mob {
+	display: none;
+}
+
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -47,4 +55,38 @@
 	opacity: 0;
 	animation: fadeInUp 2s ease-out;
 	animation-fill-mode: forwards;
+}
+
+@media (max-width: 1000px) {
+	.form_block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo svg {
+		width: 130px;
+		height: 100px;
+	}
+}
+@media (max-width: 857px) {
+}
+
+@media (max-width: 414px) {
+	.block_btn {
+		display: none;
+	}
+	.burger__mob_wrap {
+		display: block;
+	}
+	.burger__mob {
+		cursor: pointer;
+		display: block;
+	}
+	.burger__mob::before {
+		content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' height='60' viewBox='0 96 960 960' width='60'><path d='M146 784.769v-58h670v58H146ZM146 604v-58h670v58H146Zm0-178.769v-58h670v58H146Z' fill='%23D4DDB3'/></svg>");
+		position: absolute;
+		right: 10px;
+		top: 16px;
+	}
 }
