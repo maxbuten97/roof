@@ -10,19 +10,36 @@
 	src: url("/fonts/domine.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Gotham Pro";
+	src: url("/fonts/gothampro_light.ttf") format("truetype");
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: "Gotham Pro";
+	src: url("/fonts/gothampro_bold.ttf") format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Gotham Pro";
+	src: url("/fonts/gothampro.ttf") format("truetype");
+	font-weight: normal;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-
-	font-weight: 400;
+	font-family: "Gotham Pro", sans-serif;
+	font-weight: normal;
 }
 
 html,
 body {
 	margin: 0 !important;
 	// min-height: calc(100vh - 500px);
-	font-family: "Manrope", sans-serif;
 }
 
 body {
